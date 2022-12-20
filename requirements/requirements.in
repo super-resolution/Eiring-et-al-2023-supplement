@@ -1,0 +1,6 @@
+# python=3.9
+
+locan[hdbscan,open3d]==0.13
+ray
+jupyterlab
+plotly
