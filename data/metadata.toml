@@ -1,0 +1,78 @@
+# Metadata for SMLM data
+
+
+# Define the class (message) instances for locan.LocData.
+
+[[messages]]
+name = "metadata"
+module = "locan.data.metadata_pb2"
+class_name = "Metadata"
+
+
+##### Fill metadata attributes #####
+
+# Use [[]] to add repeated elements
+# Use string '2022-05-14T06:58:00Z' for Timestamp elements
+# Use int in nanoseconds for Duration elements
+
+[metadata]
+comment = ""
+# production_time = '2022-05-14T06:58:00Z'
+
+
+[[metadata.experiment.experimenters]]
+first_name = "Patrick"
+last_name = "Eiring"
+
+[[metadata.experiment.experimenters.affiliations]]
+institute = "Julius-Maximilians University"
+department = "Biotechnology and Biophysics"
+
+[metadata.experiment.experimenters.affiliations.address]
+address_lines = ["Am Hubland/Biocenter"]
+city = "Würzburg"
+city_code = "97074"
+country = "Germany"
+# emails =[]
+
+
+[[metadata.experiment.samples]]
+# comment = ""
+targets = [""]
+fluorophores = ["AF647"]
+buffers = ["100 mM MEA"]
+
+
+[[metadata.experiment.setups]]
+comment = "High Power Setup"
+
+[[metadata.experiment.setups.optical_units]]
+identifier = "1"
+
+[metadata.experiment.setups.optical_units.illumination]
+lightsource = "Laser"
+# power = 0.0
+# area = 0.0
+# power_density = 0.0
+# wavelength = 0.0
+
+[metadata.experiment.setups.optical_units.detection.camera]
+identifier = "1"
+name = "EMCCD"
+pixel_size_x = 128.4
+pixel_size_y = 128.4
+offset = 100
+gain = 200
+electrons_per_count = 15.39
+integration_time = 20_000_000
+
+[metadata.experiment.setups.optical_units.acquisition]
+frame_count = 15_000
+frame_of_interest_first = 0
+frame_of_interest_last = -1
+
+[metadata.localizer]
+software = "rapidSTORM"
+# intensity_threshold = 2500
+psf_fixed = true
+psf_size = 360
